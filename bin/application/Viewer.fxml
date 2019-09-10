@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Game">
+              <items>
+                <MenuItem fx:id="itemStart" mnemonicParsing="false" onAction="#itemStartClick" text="Start Game" />
+                  <MenuItem fx:id="itemChart" mnemonicParsing="false" onAction="#itemChartClick" text="Winning Rate Chart" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Setting">
+              <items>
+                  <RadioMenuItem fx:id="itemAbMc" mnemonicParsing="false" onAction="#itemAbMCClick" text="AI Ab V.S Radom Player" />
+                  <RadioMenuItem fx:id="itemAbMcts" mnemonicParsing="false" onAction="#itemAbMctsClick" text="AI Ab V.S AI MCTS" />
+                  <RadioMenuItem fx:id="itemHumanMcts" mnemonicParsing="false" onAction="#itemHumanMctsClick" text="Human Player V.S AI MCTS" />
+                  <RadioMenuItem fx:id="itemHumanAb" mnemonicParsing="false" onAction="#itemHumanAbClick" selected="true" text="Human Player V.S AI Ab" />
+                  <RadioMenuItem fx:id="itemHumanMc" mnemonicParsing="false" onAction="#itemHumanMCClick" text="Human Player V.S Random Player" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="390.0" prefWidth="172.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="blackInf" layoutX="35.0" layoutY="103.0" />
+            <Label fx:id="whiteInf" layoutX="35.0" layoutY="149.0" />
+            <Label fx:id="gameInf" layoutX="35.0" layoutY="195.0" />
+            <Circle fx:id="circlePiece" fill="#f5f5f5" layoutX="84.0" layoutY="50.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
